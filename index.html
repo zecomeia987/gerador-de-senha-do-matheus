@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de senha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="conteudo">
+        <div class="conteudo-titulo">
+            <img src="unlock.svg" alt="cadeado aberto">
+            <h2 class="titulo-principal">Gerador de senhas</h2>
+            <h3 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h3>
+        </div>
+        <div class="conteudo-senha">
+            <label for="senha">Senha</label>
+            <div class="senha-container">
+                <input name="senha" type="text" id="campo-senha" readonly>
+                <button class="btn-copiar" id="btn-copiar" title="Copiar senha">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="parametro">
+            <h3 class="parametro-titulo">Personalize sua senha</h3>
+            <div class="parametro-coluna__senha">
+                <div class="parametro-senha">
+                    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
+                    <div class="parametro-senha-botoes">
+                        <button class="parametro-senha__botao" id="btn-diminuir">-</button>
+                        <p class="parametro-senha__texto" id="numero-caracteres">12</p>
+                        <button class="parametro-senha__botao" id="btn-aumentar">+</button>
+                    </div>
+                </div>
+                <div class="parametro-senha">
+                    <h4 class="parametro-senha__titulo">Características da senha</h4>
+                    <div class="parametro-senha-checkboxes">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="maiusculas" checked>
+                            <span class="checkmark"></span>
+                            Letras maiúsculas
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="minusculas" checked>
+                            <span class="checkmark"></span>
+                            Letras minúsculas
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="numeros" checked>
+                            <span class="checkmark"></span>
+                            Números
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="simbolos">
+                            <span class="checkmark"></span>
+                            Símbolos
+                        </label>
+                    </div>
+                </div>
+                <div class="parametro-senha">
+                    <h4 class="parametro-senha__titulo">Força da senha</h4>
+                    <div class="forca-senha">
+                        <div class="forca-barra">
+                            <div class="forca-nivel" id="forca-nivel"></div>
+                        </div>
+                        <div class="forca-labels">
+                            <span>Fraca</span>
+                            <span>Média</span>
+                            <span>Forte</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-gerar" id="btn-gerar">Gerar Senha</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
